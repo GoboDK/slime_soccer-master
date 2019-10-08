@@ -1,15 +1,23 @@
 float g = 0.3;
 ball b;
 slime s;
+score1
+score2
 
 void setup() {
   size(877, 437);
   b = new ball();
   s = new slime();
+  score1=0;
+  score2=0;
+  textSize(32);
 }
 
 void draw() {
   background(255);
+  text(":score:", width*0.5-50, height/10);
+  text(score1, width*0.25, height/10);
+  text(score2,width*0.75,height/10);
 
   s.render();
   b.render();
