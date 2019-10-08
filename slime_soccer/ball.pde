@@ -33,6 +33,12 @@ class ball {
       x.y = height - r;
       v.y = -v.y;
     }
+    if (x.x <= 0 ) {
+      v.x= -v.x;
+    }
+    if (x.x >= width-r) {
+      v.x= -v.x;
+    }
   }
 
   void bounce(slime s) {
