@@ -39,6 +39,20 @@ class ball {
     if (x.x >= width-r) {
       v.x= -v.x;
     }
+       if(x.x < 50 && x.y > 349 ) {
+    score2 ++;
+    x.x =width/2;
+    x.y =height/2;
+    v.x = 0;
+    v.y = 0;
+    }
+     if(x.x > 827 && x.y > 349 ) {
+    score2 ++;
+    x.x =width/2;
+    x.y =height/2;
+    v.x = 0;
+    v.y = 0;
+    }
   }
 
   void bounce(slime s) {
