@@ -3,8 +3,10 @@ ball b;
 slime s;
 score1
 score2
+PImage goal;
 
 void setup() {
+  goal = loadImage("goal.png");
   size(877, 437);
   b = new ball();
   s = new slime();
@@ -24,6 +26,8 @@ void draw() {
 
   s.update();
   b.update();
+  
+  image(goal, 0, 350);
 }
 
 void keyPressed() {
