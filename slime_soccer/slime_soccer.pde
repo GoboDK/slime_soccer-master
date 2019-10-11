@@ -1,8 +1,8 @@
 float g = 0.44;
 ball b;
 slime s;
-score1;
-score2;
+int score1;
+int score2;
 PImage goal;
 
 void setup() {
