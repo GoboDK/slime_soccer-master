@@ -38,6 +38,12 @@ class slime {
       x.y = height;
       v.y = 0;
     }
+    if(x.x-r <0){
+      x.x=0+r;
+    }
+   if(x.x+r >width){
+      x.x=width-r;
+    }
 
     v.x = 0;
   }
