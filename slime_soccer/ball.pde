@@ -47,7 +47,7 @@ class ball {
     v.y = 0;
     }
      if(x.x > 827 && x.y > 349 ) {
-    score2 ++;
+    score1 ++;
     x.x =width/2;
     x.y =height/2;
     v.x = 0;
