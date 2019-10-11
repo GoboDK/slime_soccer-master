@@ -3,11 +3,14 @@ ball b;
 slime s;
 int score1;
 int score2;
+String time = "120";
+int t;
+int interval = 120;
 PImage goal;
 
 void setup() {
-  goal = loadImage("goal.png");
   size(877, 437);
+  goal= loadImage("goal.png");
   b = new ball();
   s = new slime();
   score1=0;
@@ -17,6 +20,17 @@ void setup() {
 
 void draw() {
   background(255);
+  t=interval-int(millis()/1000);
+  time=nf(t,3);
+  if(t==0){
+  textSize(56);
+  text("GAME OVER",height/2, width/4);
+  interval+=120;
+  }
+  textSize(20);
+  text(time,800,30);
+  textSize(20);
+  text("Time:",740,30);
   text(":score:", width*0.5-50, height/10);
   text(score1, width*0.25, height/10);
   text(score2,width*0.75,height/10);
@@ -29,6 +43,7 @@ void draw() {
   
   image(goal, 0, 350);
 }
+
 
 void keyPressed() {
   if (key == 'w') {
