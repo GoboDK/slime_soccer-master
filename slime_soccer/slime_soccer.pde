@@ -7,10 +7,12 @@ String time = "120";
 int t;
 int interval = 120;
 PImage goal;
+PImage goalr;
 
 void setup() {
   size(877, 437);
-  goal= loadImage("goal.png");
+  goal = loadImage("goal.png");
+  goal = loadImage("goalr.png");
   b = new ball();
   s = new slime();
   score1=0;
@@ -42,6 +44,7 @@ void draw() {
   b.update();
   
   image(goal, 0, 350);
+  image(goalr, 827, 350;
 }
 
 
