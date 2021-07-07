@@ -25,8 +25,13 @@ void draw() {
   if(t==0){
   textSize(56);
   text("GAME OVER",height/2, width/4);
-  interval+=120;
+  text(score1,30,height/2);
+  text(score2,847,height/2);
   }
+  if(t==-1){
+  delay(1000000);
+  }
+  
   textSize(20);
   text(time,800,30);
   textSize(20);
